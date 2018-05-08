@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+
 <launch>
   <arg name="paused" default="false"/>
   <arg name="gui" default="true"/>
@@ -10,7 +10,7 @@
   </include>
 
   <!-- send lwa4d urdf to param server -->
-  <param name="robot_description" command="$(find xacro)/xacro --inorder '$(find schunk_lwa4d)/urdf/robot.urdf.xacro'" />
+  <param name="robot_description" command="$(find xacro)/xacro --inorder '$(find taurob_schunk_lwa4d)/urdf/taurob_schunk_lwa4d.urdf.xacro'" />
 
   <!-- push robot_description to factory and spawn robot in gazebo -->
   <node name="spawn_gazebo_model" pkg="gazebo_ros" type="spawn_model" args="-urdf -param robot_description -model lwa4d -z 0.01 " respawn="false" output="screen" />
@@ -27,7 +27,7 @@
   <node ns="arm" pkg="cob_helper_tools" type="fake_driver.py" name="fake_driver" cwd="node" respawn="false" output="screen"/>
 
   <!-- controllers -->
-  <rosparam ns="arm" command="load" file="$(find schunk_lwa4d)/config/arm_controller.yaml" />
+  <rosparam ns="arm" command="load" file="$(find taurob_schunk_lwa4d)/config/arm_controller.yaml" />
   <!--rosparam ns="arm" command="load" file="$(find schunk_lwa4d)/config/joint_limits.yaml"/-->
 
   <!-- start_controllers -->
@@ -40,11 +40,11 @@
 
   <!-- start diagnostics -->
   <node pkg="diagnostic_aggregator" type="aggregator_node" name="diagnostic_aggregator" >
-    <rosparam command="load" file="$(find schunk_lwa4d)/config/diagnostics_analyzers.yaml" />
+    <rosparam command="load" file="$(find taurob_schunk_lwa4d)/config/diagnostics_analyzers.yaml" />
   </node>
   <node pkg="cob_dashboard" type="cob_dashboard_aggregator.py" name="dashboard_aggregator" />
 
   <!-- upload script server parameters -->
-  <rosparam command="load" ns="/script_server/arm" file="$(find schunk_lwa4d)/config/joint_configurations.yaml"/>
+  <rosparam command="load" ns="/script_server/arm" file="$(find taurob_schunk_lwa4d)/config/joint_configurations.yaml"/>
 
 </launch>

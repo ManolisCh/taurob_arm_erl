@@ -1,13 +1,13 @@
-<?xml version="1.0"?>
+
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro"
        name="lwa4d" >
 
   <!-- common stuff -->
-  <xacro:include filename="$(find schunk_description)/urdf/common.xacro" />
-  <xacro:include filename="$(find schunk_description)/urdf/materials.urdf.xacro" />
+  <xacro:include filename="$(find taurob_schunk_lwa4d)/urdf/common.xacro" />
+  <xacro:include filename="$(find taurob_schunk_lwa4d)/urdf/materials.urdf.xacro" />
 
   <!-- schunk lwa4d -->
-  <xacro:include filename="$(find schunk_description)/urdf/lwa4d/lwa4d.urdf.xacro" />
+  <xacro:include filename="$(find taurob_schunk_lwa4d)/urdf/lwa4d/lwa4d.urdf.xacro" />
 
   <!-- Used for fixing robot to Gazebo -->
   <link name="world"/>
