@@ -9,7 +9,7 @@
   <!-- schunk lwa4d -->
   <xacro:include filename="$(find taurob_schunk_lwa4d)/urdf/lwa4d/lwa4d.urdf.xacro" />
 
-  <!-- Used for fixing robot to Gazebo -->
+ <!-- Used for fixing robot to Gazebo -->
   <link name="world"/>
 
   <!-- arm -->
