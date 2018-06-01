@@ -8,7 +8,7 @@
 
   <!-- Run -->
   <node pkg="moveit_setup_assistant" type="moveit_setup_assistant" name="moveit_setup_assistant" 
-	args="--config_pkg=schunk_lwa4d_moveit_config"
+	args="--config_pkg=taurob_schunk_lwa4d_moveit_config"
 	launch-prefix="$(arg launch_prefix)"
         output="screen" />
 

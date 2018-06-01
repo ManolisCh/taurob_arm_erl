@@ -14,6 +14,7 @@ For the arm to work with ROS and CANopen we have first to configure the modules 
 	sudo apt-get install ros-kinetic-cob-dashboard
 	sudo apt-get install ros-kinetic-ros-controllers
     sudo apt-get install ros-kinetic-cob-helper-tools
+    sudo apt-get install ros-kinetic-moveit
       
 
 ## Using the real arm 
