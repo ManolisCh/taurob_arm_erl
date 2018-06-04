@@ -1,4 +1,3 @@
-
 <launch>
  <!-- Set the param that trajectory_execution_manager needs to find the controller plugin -->
  <arg name="moveit_controller_manager" default="moveit_simple_controller_manager/MoveItSimpleControllerManager" />
@@ -6,5 +5,3 @@
  <!-- load controller_list -->
  <rosparam file="$(find taurob_schunk_lwa4d_moveit_config)/config/controllers.yaml"/>
 </launch>
-  
-

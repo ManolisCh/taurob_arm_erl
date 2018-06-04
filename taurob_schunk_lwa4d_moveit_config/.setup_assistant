@@ -1,8 +1,10 @@
 moveit_setup_assistant_config:
   URDF:
-    package: schunk_lwa4d
-    relative_path: urdf/robot.urdf.xacro
+    package: taurob_schunk_lwa4d
+    relative_path: urdf/schunk_lwa4d_standalone.urdf.xacro
   SRDF:
     relative_path: config/lwa4d.srdf
   CONFIG:
-    generated_timestamp: 1459927607
+    author_name: Manolis
+    author_email: johnDoe@bham.ac.uk
+    generated_timestamp: 1528120964
