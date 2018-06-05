@@ -5,7 +5,6 @@ For the arm to work with ROS and CANopen we have first to configure the modules 
 
 ## Dependencies
 
-    sudo apt-get install ros-kinetic-schunk-modular-robotics
     sudo apt-get install ros-kinetic-ros-canopen
 	sudo apt-get install ros-kinetic-cob-extern
 	sudo apt-get install ros-kinetic-cob-common
@@ -14,6 +13,8 @@ For the arm to work with ROS and CANopen we have first to configure the modules 
 	sudo apt-get install ros-kinetic-cob-dashboard
 	sudo apt-get install ros-kinetic-ros-controllers
     sudo apt-get install ros-kinetic-cob-helper-tools
+    sudo apt-get install ros-kinetic-cob-gazebo-ros-control
+    sudo apt-get install ros-kinetic-cob-gazebo-plugins
     sudo apt-get install ros-kinetic-moveit
       
 
