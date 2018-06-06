@@ -1,0 +1,19 @@
+jog_arm_server:
+  simulation: true # Whether the robot is started in simulation environment
+  collision_check: false # Check collisions?
+  command_in_topic:  jog_arm_server/delta_jog_cmds #topic for incoming commands from joy_to_twist node towards jog_arm_server
+  command_frame:  /world  # TF frame that incoming cmds are given in
+  incoming_command_timeout:  5  # Stop jogging if X seconds elapse without a new cmd
+  joint_topic:  /arm/joint_states #where does the arm driver publish the joint names/values? Typically 'joint_states'.
+  move_group_name:  arm    # Must be a serial chain since the Jacobian is used.
+  singularity_threshold:  5.5  # Slow down when the condition number hits this (close to singularity)
+  hard_stop_singularity_threshold: 12. # Stop when the condition number hits this
+  command_out_topic:  /arm/joint_trajectory_controller/command # name of the outgoing trajectory_msgs::JointTrajectory topic. Your robot driver should be subscribed to this.
+  planning_frame:  /world # typically should match the MoveIt! planning frame
+  low_pass_filter_coeff:  2.  # Larger --> trust the filtered data more, trust the measurements less.
+  publish_period:  0.01  # 1/Nominal publish rate [seconds]
+  scale:
+    linear:  0.0001  # Max linear velocity. Meters per publish_period. Units is [m/s]
+    rotational:  0.0001  # Max angular velocity. Rads per publish_period. Units is [rad/s]
+  # Publish boolean warnings to this topic
+  warning_topic:  jog_arm_server/warning
