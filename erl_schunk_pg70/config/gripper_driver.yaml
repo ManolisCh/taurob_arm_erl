@@ -5,7 +5,7 @@ heartbeat: # simple heartbeat producer, optional!
   rate: 20 # heartbeat rate
   msg: "77f#05" # message to send, cansend format: heartbeat of node 127 with status 5=Started
 defaults: # optional, all defaults can be overwritten per node
-  eds_pkg: schunk_pg70 # optional package  name for relative path
+  eds_pkg: erl_schunk_pg70 # optional package  name for relative path
   eds_file: "config/Schunk_0_63.dcf" # path to EDS/DCF file
   pos_to_device: "rint(pos*1000000*2)" # m -> µm
   pos_from_device: "obj6064/1000000/2" # actual position [µm] -> m
