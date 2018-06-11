@@ -1,4 +1,3 @@
-<?xml version="1.0"?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro"
        name="pg70" >
 
@@ -12,7 +11,7 @@
   <!-- Used for fixing robot to Gazebo -->
   <link name="world"/>
 
-  <!-- arm -->
+  <!-- gripper -->
   <xacro:schunk_pg70 name="pg70" parent="world">
     <origin xyz="0 0 0.1" rpy="0 0 0" /> <!--slightly above gazebo plane-->
   </xacro:schunk_pg70>

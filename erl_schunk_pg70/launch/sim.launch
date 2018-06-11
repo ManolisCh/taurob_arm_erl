@@ -1,4 +1,3 @@
-<?xml version="1.0"?>
 <launch>
   <arg name="paused" default="false"/>
   <arg name="gui" default="true"/>
@@ -16,14 +15,14 @@
   <node name="spawn_gazebo_model" pkg="gazebo_ros" type="spawn_model" args="-urdf -param robot_description -model lwa4d -z 0.01 " respawn="false" output="screen" />
 
   <!-- robot state publisher -->
-  <node ns="gripper" pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher">
+  <node ns="pg70" pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher">
       <param name="publish_frequency" type="double" value="50.0" />
       <param name="tf_prefix" type="string" value="" />
   </node>
 
   <!-- fake Calibration and HW-Services -->
   <node pkg="rostopic" type="rostopic" name="fake_joint_calibration" args="pub /calibrated std_msgs/Bool true" />
-  <node ns="gripper" pkg="cob_helper_tools" type="fake_driver.py" name="fake_driver" cwd="node" respawn="false" output="screen"/>
+  <node ns="pg70" pkg="cob_helper_tools" type="fake_driver.py" name="fake_driver" cwd="node" respawn="false" output="screen"/>
 
   <!-- controllers -->
   <rosparam ns="pg70" command="load" file="$(find erl_schunk_pg70)/config/gripper_controller.yaml" />
