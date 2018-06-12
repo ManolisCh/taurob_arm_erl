@@ -8,23 +8,23 @@
 
   <!-- schunk lwa4d -->
   <xacro:include filename="$(find taurob_schunk_lwa4d)/urdf/lwa4d/lwa4d.urdf.xacro" />
-  
+
   <!-- schunk pg70 -->
   <xacro:include filename="$(find erl_schunk_pg70)/urdf/pg70/pg70.urdf.xacro" />
 
   <!-- Used for fixing robot to Gazebo -->
   <link name="world"/>
-  
+
    <!-- arm -->
   <xacro:schunk_lwa4d name="arm" parent="world" has_podest="true" use_factory_settings="true">
-    <origin xyz="0 0 0" rpy="0 0 0" /> 	
+    <origin xyz="0 0 0" rpy="0 0 0" />
   </xacro:schunk_lwa4d>
 
   <!-- gripper -->
   <xacro:schunk_pg70 name="pg70" parent="arm_ee_link">
-    <origin xyz="0 0 0" rpy="0 0 0" /> <!--slightly above gazebo plane-->
+    <origin xyz="0 0 0" rpy="0 0 0" />
   </xacro:schunk_pg70>
 
- 
+
 
 </robot>
