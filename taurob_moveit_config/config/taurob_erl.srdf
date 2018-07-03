@@ -1,0 +1,83 @@
+<?xml version="1.0" ?>
+<!--This does not replace URDF, and is not an extension of URDF.
+    This is a format for representing semantic information about the robot structure.
+    A URDF file must exist for this robot as well, where the joints and the links that are referenced are defined
+-->
+<robot name="taurob_erl">
+    <!--GROUPS: Representation of a set of joints and links. This can be useful for specifying DOF to plan for, defining arms, end effectors, etc-->
+    <!--LINKS: When a link is specified, the parent joint of that link (if it exists) is automatically included-->
+    <!--JOINTS: When a joint is specified, the child link of that joint (which will always exist) is automatically included-->
+    <!--CHAINS: When a chain is specified, all the links along the chain (including endpoints) are included in the group. Additionally, all the joints that are parents to included links are also included. This means that joints along the chain and the parent joint of the base link are included in the group-->
+    <!--SUBGROUPS: Groups can also be formed by referencing to already defined group names-->
+    <group name="arm">
+        <chain base_link="arm_base_link" tip_link="arm_7_link" />
+    </group>
+    <!--DISABLE COLLISIONS: By default it is assumed that any link of the robot could potentially come into collision with any other link in the robot. This tag disables collision checking between a specified pair of links. -->
+    <disable_collisions link1="arm_1_link" link2="arm_2_link" reason="Adjacent" />
+    <disable_collisions link1="arm_1_link" link2="arm_3_link" reason="Never" />
+    <disable_collisions link1="arm_1_link" link2="arm_4_link" reason="Never" />
+    <disable_collisions link1="arm_1_link" link2="arm_podest_link" reason="Adjacent" />
+    <disable_collisions link1="arm_1_link" link2="chassis_link" reason="Never" />
+    <disable_collisions link1="arm_1_link" link2="flipper_front_link" reason="Never" />
+    <disable_collisions link1="arm_1_link" link2="hokuyo_link" reason="Never" />
+    <disable_collisions link1="arm_1_link" link2="motor_track_link" reason="Never" />
+    <disable_collisions link1="arm_2_link" link2="arm_3_link" reason="Adjacent" />
+    <disable_collisions link1="arm_2_link" link2="arm_4_link" reason="Never" />
+    <disable_collisions link1="arm_2_link" link2="arm_5_link" reason="Never" />
+    <disable_collisions link1="arm_2_link" link2="arm_6_link" reason="Never" />
+    <disable_collisions link1="arm_2_link" link2="arm_7_link" reason="Never" />
+    <disable_collisions link1="arm_2_link" link2="arm_podest_link" reason="Never" />
+    <disable_collisions link1="arm_2_link" link2="chassis_link" reason="Never" />
+    <disable_collisions link1="arm_2_link" link2="flipper_front_link" reason="Never" />
+    <disable_collisions link1="arm_2_link" link2="hokuyo_link" reason="Never" />
+    <disable_collisions link1="arm_2_link" link2="motor_track_link" reason="Never" />
+    <disable_collisions link1="arm_2_link" link2="pg70_finger_left_link" reason="Never" />
+    <disable_collisions link1="arm_2_link" link2="pg70_finger_right_link" reason="Never" />
+    <disable_collisions link1="arm_2_link" link2="pg70_palm_link" reason="Never" />
+    <disable_collisions link1="arm_3_link" link2="arm_4_link" reason="Adjacent" />
+    <disable_collisions link1="arm_3_link" link2="arm_5_link" reason="Never" />
+    <disable_collisions link1="arm_3_link" link2="arm_6_link" reason="Never" />
+    <disable_collisions link1="arm_3_link" link2="arm_7_link" reason="Never" />
+    <disable_collisions link1="arm_3_link" link2="arm_podest_link" reason="Never" />
+    <disable_collisions link1="arm_3_link" link2="chassis_link" reason="Never" />
+    <disable_collisions link1="arm_3_link" link2="flipper_front_link" reason="Never" />
+    <disable_collisions link1="arm_3_link" link2="hokuyo_link" reason="Never" />
+    <disable_collisions link1="arm_3_link" link2="motor_track_link" reason="Never" />
+    <disable_collisions link1="arm_3_link" link2="pg70_finger_left_link" reason="Never" />
+    <disable_collisions link1="arm_3_link" link2="pg70_finger_right_link" reason="Never" />
+    <disable_collisions link1="arm_3_link" link2="pg70_palm_link" reason="Never" />
+    <disable_collisions link1="arm_4_link" link2="arm_5_link" reason="Adjacent" />
+    <disable_collisions link1="arm_4_link" link2="arm_6_link" reason="Never" />
+    <disable_collisions link1="arm_4_link" link2="arm_7_link" reason="Never" />
+    <disable_collisions link1="arm_4_link" link2="arm_podest_link" reason="Never" />
+    <disable_collisions link1="arm_4_link" link2="chassis_link" reason="Never" />
+    <disable_collisions link1="arm_4_link" link2="flipper_front_link" reason="Never" />
+    <disable_collisions link1="arm_4_link" link2="hokuyo_link" reason="Never" />
+    <disable_collisions link1="arm_4_link" link2="motor_track_link" reason="Never" />
+    <disable_collisions link1="arm_4_link" link2="pg70_finger_left_link" reason="Never" />
+    <disable_collisions link1="arm_4_link" link2="pg70_finger_right_link" reason="Never" />
+    <disable_collisions link1="arm_4_link" link2="pg70_palm_link" reason="Never" />
+    <disable_collisions link1="arm_5_link" link2="arm_6_link" reason="Adjacent" />
+    <disable_collisions link1="arm_5_link" link2="pg70_finger_left_link" reason="Never" />
+    <disable_collisions link1="arm_5_link" link2="pg70_finger_right_link" reason="Never" />
+    <disable_collisions link1="arm_6_link" link2="arm_7_link" reason="Adjacent" />
+    <disable_collisions link1="arm_6_link" link2="pg70_finger_left_link" reason="Never" />
+    <disable_collisions link1="arm_6_link" link2="pg70_finger_right_link" reason="Never" />
+    <disable_collisions link1="arm_6_link" link2="pg70_palm_link" reason="Never" />
+    <disable_collisions link1="arm_7_link" link2="pg70_finger_left_link" reason="Never" />
+    <disable_collisions link1="arm_7_link" link2="pg70_finger_right_link" reason="Never" />
+    <disable_collisions link1="arm_7_link" link2="pg70_palm_link" reason="Adjacent" />
+    <disable_collisions link1="arm_podest_link" link2="chassis_link" reason="Adjacent" />
+    <disable_collisions link1="arm_podest_link" link2="flipper_front_link" reason="Never" />
+    <disable_collisions link1="arm_podest_link" link2="hokuyo_link" reason="Never" />
+    <disable_collisions link1="arm_podest_link" link2="motor_track_link" reason="Never" />
+    <disable_collisions link1="chassis_link" link2="flipper_front_link" reason="Adjacent" />
+    <disable_collisions link1="chassis_link" link2="hokuyo_link" reason="Adjacent" />
+    <disable_collisions link1="chassis_link" link2="motor_track_link" reason="Adjacent" />
+    <disable_collisions link1="flipper_front_link" link2="hokuyo_link" reason="Never" />
+    <disable_collisions link1="flipper_front_link" link2="motor_track_link" reason="Default" />
+    <disable_collisions link1="hokuyo_link" link2="motor_track_link" reason="Never" />
+    <disable_collisions link1="pg70_finger_left_link" link2="pg70_finger_right_link" reason="Default" />
+    <disable_collisions link1="pg70_finger_left_link" link2="pg70_palm_link" reason="Adjacent" />
+    <disable_collisions link1="pg70_finger_right_link" link2="pg70_palm_link" reason="Adjacent" />
+</robot>

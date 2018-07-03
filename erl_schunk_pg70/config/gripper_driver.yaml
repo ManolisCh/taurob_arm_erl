@@ -7,12 +7,12 @@ heartbeat: # simple heartbeat producer, optional!
 defaults: # optional, all defaults can be overwritten per node
   eds_pkg: erl_schunk_pg70 # optional package  name for relative path
   eds_file: "config/Schunk_0_63.dcf" # path to EDS/DCF file
-  pos_to_device: "rint(pos*1000000*2)" # m -> µm
-  pos_from_device: "obj6064/1000000/2" # actual position [µm] -> m
-  vel_to_device: "rint(vel*1000000*2)" # m -> µm
-  vel_from_device: "obj606C/1000000/2" # actual velocity [µm] -> m
+  pos_to_device: "pos*2000000.0"
+  pos_from_device: "obj6064/2000000.0"
+  vel_to_device: "vel*2000000.0"
+  vel_from_device: "obj606C/2000000.0"
 nodes:
   motor:
     joint: pg70_finger_left_joint
-    id: 1
+    id: 12
 

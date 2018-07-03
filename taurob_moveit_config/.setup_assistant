@@ -1,0 +1,11 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: taurob_erl_description
+    relative_path: urdf/taurob_erl.urdf.xacro
+    xacro_args: "--inorder "
+  SRDF:
+    relative_path: config/taurob_erl.srdf
+  CONFIG:
+    author_name: Manolis
+    author_email: John@bham.ac.uk
+    generated_timestamp: 1530620933

@@ -14,7 +14,7 @@
   </node>
 
   <!-- controllers -->
-  <rosparam ns="pg70" command="load" file="$(find schunk_pg70)/config/gripper_controller.yaml" />
+  <rosparam ns="pg70" command="load" file="$(find erl_schunk_pg70)/config/gripper_controller.yaml" />
 
   <!-- start_controllers -->
   <node ns="pg70" name="gripper_controller_spawner" pkg="controller_manager" type="controller_manager" args="spawn joint_state_controller" respawn="false" output="screen"/>
@@ -24,6 +24,6 @@
   <node ns="pg70" name="joint_states_relay" pkg="topic_tools" type="relay" args="joint_states /joint_states" cwd="node" respawn="true" output="screen"/>
 
   <!-- default robot config -->
-  <rosparam ns="/script_server/gripper" command="load" file="$(find schunk_pg70)/config/joint_configurations.yaml" />
+  <rosparam ns="/script_server/gripper" command="load" file="$(find erl_schunk_pg70)/config/joint_configurations.yaml" />
 
 </launch>
