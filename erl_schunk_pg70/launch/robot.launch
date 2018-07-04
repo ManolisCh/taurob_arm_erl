@@ -9,7 +9,7 @@
   </node>
 
   <node ns="pg70" name="driver" pkg="canopen_motor_node" type="canopen_motor_node" output="screen" clear_params="true" launch-prefix="">
-     <rosparam param="bus/device" subst_value="True">can0</rosparam>
+     <rosparam command="load" file="$(find erl_schunk_pg70)/config/can0.yaml" />
      <rosparam command="load" file="$(find erl_schunk_pg70)/config/gripper_driver.yaml" />
   </node>
 
