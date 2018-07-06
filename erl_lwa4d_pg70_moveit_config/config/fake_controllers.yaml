@@ -10,4 +10,4 @@ controller_list:
       - arm_7_joint
   - name: fake_pg70_controller
     joints:
-      []
+      - pg70_finger_left_joint

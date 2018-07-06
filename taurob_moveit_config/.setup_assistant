@@ -6,6 +6,6 @@ moveit_setup_assistant_config:
   SRDF:
     relative_path: config/taurob_erl.srdf
   CONFIG:
-    author_name: Manolis
-    author_email: John@bham.ac.uk
-    generated_timestamp: 1530620933
+    author_name: Manolis Chiou
+    author_email: e.chiou@cs.bham.ac.uk
+    generated_timestamp: 1530894539

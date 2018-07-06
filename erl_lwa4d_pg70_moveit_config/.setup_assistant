@@ -7,5 +7,5 @@ moveit_setup_assistant_config:
     relative_path: config/lwa4d.srdf
   CONFIG:
     author_name: Manolis
-    author_email: JohnDoe@bham.ac.uk
-    generated_timestamp: 1528837417
+    author_email: e.chiou@cs.bham.ac.uk
+    generated_timestamp: 1530887331
