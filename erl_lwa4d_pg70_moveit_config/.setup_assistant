@@ -1,6 +1,6 @@
 moveit_setup_assistant_config:
   URDF:
-    package: taurob_schunk_lwa4d
+    package: erl_lwa4d
     relative_path: urdf/lwa4d_pg70.urdf.xacro
     xacro_args: "--inorder "
   SRDF:
