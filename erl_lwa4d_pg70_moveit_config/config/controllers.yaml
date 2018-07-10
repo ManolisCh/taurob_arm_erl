@@ -14,17 +14,7 @@ controller_list:
 
   - name: pg70/joint_trajectory_controller
     action_ns: follow_joint_trajectory
-    type: FollowJointTrajectory  
-    default: true    
+    type: FollowJointTrajectory
+    default: true
     joints:
       - pg70_finger_left_joint
-      
-
-
-
-
-
-
-
-
-

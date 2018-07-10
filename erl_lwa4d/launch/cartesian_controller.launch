@@ -4,8 +4,8 @@
   <group ns="arm">
 
     <!-- load Cartesian controller config -->
-    <rosparam command="load" file="$(find schunk_lwa4d)/config/arm_cartesian_controller.yaml"/>
-    <rosparam command="load" file="$(find schunk_lwa4d)/config/arm_self_collision.yaml"/>
+    <rosparam command="load" file="$(find erl_lwa4d)/config/arm_cartesian_controller.yaml"/>
+    <rosparam command="load" file="$(find erl_lwa4d)/config/arm_self_collision.yaml"/>
 
     <!-- Cartesian controllers -->
     <node pkg="cob_twist_controller" type="cob_twist_controller_node" name="twist_controller" cwd="node" respawn="false" output="screen"/>

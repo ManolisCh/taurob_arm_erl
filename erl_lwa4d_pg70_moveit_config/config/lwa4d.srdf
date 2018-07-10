@@ -38,20 +38,12 @@
     </group_state>
     <group_state name="folded" group="arm">
         <joint name="arm_1_joint" value="0" />
-        <joint name="arm_2_joint" value="2" />
+        <joint name="arm_2_joint" value="-1.0484" />
         <joint name="arm_3_joint" value="0" />
-        <joint name="arm_4_joint" value="-2.1363" />
+        <joint name="arm_4_joint" value="-1.5429" />
         <joint name="arm_5_joint" value="0" />
-        <joint name="arm_6_joint" value="1.85" />
+        <joint name="arm_6_joint" value="-1.4786" />
         <joint name="arm_7_joint" value="0" />
-    </group_state>
-    <group_state name="open" group="pg70">
-        <joint name="pg70_finger_left_joint" value="0.03" />
-        <joint name="pg70_finger_right_joint" value="0" />
-    </group_state>
-    <group_state name="closed" group="pg70">
-        <joint name="pg70_finger_left_joint" value="0.01" />
-        <joint name="pg70_finger_right_joint" value="0" />
     </group_state>
     <!--END EFFECTOR: Purpose: Represent information about an end effector.-->
     <end_effector name="pg70" parent_link="arm_ee_link" group="pg70" />

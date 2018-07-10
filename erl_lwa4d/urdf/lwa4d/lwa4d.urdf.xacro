@@ -23,7 +23,7 @@
   -->
   <xacro:macro name="schunk_lwa4d" params="parent name *origin has_podest use_factory_settings">
     <xacro:if value="${use_factory_settings}">
-      <xacro:schunk_lwa4d_custom parent="${parent}" name="${name}" has_podest="${has_podest}" invert_j1="false" invert_j2="false" invert_j3="false" invert_j4="false" invert_j5="false" invert_j6="true" invert_j7="true">
+      <xacro:schunk_lwa4d_custom parent="${parent}" name="${name}" has_podest="${has_podest}" invert_j1="false" invert_j2="false" invert_j3="false" invert_j4="false" invert_j5="false" invert_j6="false" invert_j7="false">
         <xacro:insert_block name="origin" />
       </xacro:schunk_lwa4d_custom>
     </xacro:if>
