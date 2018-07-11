@@ -1,6 +1,10 @@
 <launch>
+
+  <!-- By default we load the pg70 URDF (normaly when we run it stand alone). -->
+  <arg name="load_lwa4d_description" default="true"/>
+
   <!-- send urdf to param server -->
-  <param name="robot_description" command="$(find xacro)/xacro --inorder '$(find erl_lwa4d)/urdf/lwa4d_standalone.urdf.xacro'" />
+  <param if="$(arg load_lwa4d_description)" name="robot_description" command="$(find xacro)/xacro --inorder '$(find erl_lwa4d)/urdf/lwa4d_standalone.urdf.xacro'" />
 
   <!-- robot state publisher -->
   <node ns="arm" pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher">

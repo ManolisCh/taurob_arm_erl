@@ -1,12 +1,12 @@
 <package>
 
-  <name>taurob_moveit_config</name>
+  <name>erl_taurob_moveit_config</name>
   <version>0.3.0</version>
   <description>
      An automatically generated package with all the configuration and launch files for using the taurob_erl with the MoveIt! Motion Planning Framework
   </description>
-  <author email="e.chiou@cs.bham.ac.uk">Manolis Chiou</author>
-  <maintainer email="e.chiou@cs.bham.ac.uk">Manolis Chiou</maintainer>
+  <author email="e.chiou@bham.ac.uk">Manolis</author>
+  <maintainer email="e.chiou@bham.ac.uk">Manolis</maintainer>
 
   <license>BSD</license>
 

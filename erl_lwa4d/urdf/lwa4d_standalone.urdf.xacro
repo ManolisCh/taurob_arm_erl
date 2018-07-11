@@ -14,7 +14,7 @@
 
   <!-- arm -->
   <xacro:schunk_lwa4d name="arm" parent="world" has_podest="true" use_factory_settings="true">
-    <origin xyz="0 0 0" rpy="0 0 0" /> 	
+    <origin xyz="0 0 0" rpy="0 0 0" />
   </xacro:schunk_lwa4d>
 
 </robot>

@@ -1,0 +1,15 @@
+jog_joint_node:
+  joint_names:
+    - arm_1_joint
+    - arm_2_joint
+    - arm_3_joint
+    - arm_4_joint
+    - arm_5_joint
+    - arm_6_joint
+    - arm_7_joint
+
+jog_frame_node:
+  group_names:
+    - arm
+  link_names:
+    - arm_ee_link

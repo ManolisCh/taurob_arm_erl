@@ -1,0 +1,15 @@
+<launch>
+  <!-- send urdf to param server -->
+  <param name="robot_description" command="$(find xacro)/xacro --inorder '$(find erl_lwa4d)/urdf/lwa4d_pg70.urdf.xacro'" />
+
+  <!-- Launch lwa4d arm -->
+  <include file="$(find erl_lwa4d)/launch/arm.launch">
+    <arg name="load_lwa4d_description" value="false"/>
+  </include>
+
+  <!-- Launch pg70 -->
+  <include file="$(find erl_pg70)/launch/gripper.launch">
+    <arg name="load_pg70_description" value="false"/>
+  </include>
+
+</launch>
