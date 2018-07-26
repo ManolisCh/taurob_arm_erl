@@ -1,6 +1,5 @@
 
-<robot xmlns:xacro="http://www.ros.org/wiki/xacro"
-       name="lwa4d" >
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="lwa4d" >
 
   <!-- common stuff -->
   <xacro:include filename="$(find erl_lwa4d)/urdf/common.xacro" />

@@ -30,7 +30,7 @@ joint_group_position_controller:
   joints:
      - pg70_finger_left_joint
   required_drive_mode: 1
-     
+
 pg70_finger_left_joint_position_controller:
   type: position_controllers/JointPositionController
   joint: pg70_finger_left_joint

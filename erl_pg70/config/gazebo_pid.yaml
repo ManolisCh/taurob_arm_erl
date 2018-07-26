@@ -1,0 +1,3 @@
+gazebo_ros_control:
+  pid_gains:
+    pg70_finger_left_joint: {p: 100.0, i: 0.01, d: 10.0}

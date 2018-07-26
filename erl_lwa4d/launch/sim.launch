@@ -28,6 +28,7 @@
 
   <!-- controllers -->
   <rosparam ns="arm" command="load" file="$(find erl_lwa4d)/config/arm_controller.yaml" />
+  <rosparam ns="arm" command="load" file="$(find erl_lwa4d)/config/gazebo_pid.yaml" />
   <!--rosparam ns="arm" command="load" file="$(find schunk_lwa4d)/config/joint_limits.yaml"/-->
 
   <!-- start_controllers -->
