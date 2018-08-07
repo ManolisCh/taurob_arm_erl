@@ -1,6 +1,8 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="lwa4d">
-  <xacro:property name="safety_offset" value="0.02"/>
+  <xacro:property name="movement_safety_offset" value="0.05"/>
+  <xacro:property name="velocity_safety_offset" value="0.2"/>
+  <xacro:property name="velocityERB_safety_offset" value="0.5"/>
 
   <xacro:include filename="$(find erl_lwa4d)/urdf/common.xacro" />
   <xacro:include filename="$(find erl_lwa4d)/urdf/lwa4d/lwa4d.gazebo.xacro"/>
@@ -89,7 +91,7 @@
       <parent link="${name}_base_link"/>
       <child link="${name}_1_link"/>
       <xacro:axis_config invert="${invert_j1}"/>
-      <limit effort="216" velocity="0.43633" lower="${-M_PI+safety_offset}" upper="${M_PI-safety_offset}"/>
+      <limit effort="216" velocity="${0.43633-velocity_safety_offset}" lower="${-M_PI+movement_safety_offset}" upper="${M_PI-movement_safety_offset}"/>
     </joint>
 
     <link name="${name}_1_link">
@@ -118,7 +120,7 @@
       <parent link="${name}_1_link"/>
       <child link="${name}_2_link"/>
       <xacro:axis_config invert="${invert_j2}"/>
-      <limit effort="216" velocity="0.43633" lower="${-2.14 + safety_offset}" upper="${2.14 - safety_offset}"/>
+      <limit effort="216" velocity="${0.43633-velocity_safety_offset}" lower="${-2.14 + movement_safety_offset}" upper="${2.14 - movement_safety_offset}"/>
     </joint>
 
     <link name="${name}_2_link">
@@ -147,7 +149,7 @@
       <parent link="${name}_2_link"/>
       <child link="${name}_3_link"/>
       <xacro:axis_config invert="${invert_j3}"/>
-      <limit effort="81.5" velocity="0.4189" lower="${-M_PI + safety_offset}" upper="${M_PI - safety_offset}"/>
+      <limit effort="81.5" velocity="${0.4189-velocity_safety_offset}" lower="${-M_PI + movement_safety_offset}" upper="${M_PI - movement_safety_offset}"/>
     </joint>
 
     <link name="${name}_3_link">
@@ -176,7 +178,7 @@
       <parent link="${name}_3_link"/>
       <child link="${name}_4_link"/>
       <xacro:axis_config invert="${invert_j4}"/>
-      <limit effort="81.5" velocity="0.4189" lower="${-2.18 + safety_offset}" upper="${2.18 - safety_offset}"/>
+      <limit effort="81.5" velocity="${0.4189-velocity_safety_offset}" lower="${-2.18 + movement_safety_offset}" upper="${2.18 - movement_safety_offset}"/>
     </joint>
 
     <link name="${name}_4_link">
@@ -205,7 +207,7 @@
       <parent link="${name}_4_link"/>
       <child link="${name}_5_link"/>
       <xacro:axis_config invert="${invert_j5}"/>
-      <limit effort="20.7" velocity="0.43633" lower="${-M_PI + safety_offset}" upper="${M_PI - safety_offset}"/>
+      <limit effort="20.7" velocity="${0.43633-velocity_safety_offset}" lower="${-M_PI + movement_safety_offset}" upper="${M_PI - movement_safety_offset}"/>
     </joint>
 
     <link name="${name}_5_link">
@@ -234,7 +236,7 @@
       <parent link="${name}_5_link"/>
       <child link="${name}_6_link"/>
       <xacro:axis_config invert="${invert_j6}"/>
-      <limit effort="15" velocity="1.2566" lower="${-2.09 + safety_offset}" upper="${2.09 - safety_offset}"/>
+      <limit effort="15" velocity="${1.2566-velocityERB_safety_offset}" lower="${-2.09 + movement_safety_offset}" upper="${2.09 - movement_safety_offset}"/>
     </joint>
 
     <link name="${name}_6_link">
@@ -263,7 +265,7 @@
       <parent link="${name}_6_link"/>
       <child link="${name}_7_link"/>
       <xacro:axis_config invert="${invert_j7}"/>
-      <limit effort="15" velocity="1.2566" lower="${-2.96 + safety_offset}" upper="${2.96 - safety_offset}"/>
+      <limit effort="15" velocity="${1.2566-velocityERB_safety_offset}" lower="${-2.96 + movement_safety_offset}" upper="${2.96 - movement_safety_offset}"/>
     </joint>
 
     <link name="${name}_7_link">
