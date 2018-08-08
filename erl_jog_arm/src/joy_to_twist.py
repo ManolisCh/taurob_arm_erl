@@ -1,27 +1,19 @@
 #!/usr/bin/env python
 
-
 # Take joystick cmds. Republish them as TwistStamped for
 # e.g. jogging.
 
-# RB: +x, LB: -x joy.buttons[4], joy.buttons[5]
+# RB: +x, LB: -x
 # L on L dpad: +x
-# Up on L dpad: +z joy.axes[1]
-
-# START joy.buttons[7]
-# BACK joy.buttons[6]
+# Up on L dpad: +z
 
 # R on R stick: +Rx
 # Up on R stick: +Ry
 # B: +Rz, A: -Rz
 
-
 import rospy
 from geometry_msgs.msg import TwistStamped
 from sensor_msgs.msg import Joy
-from trajectory_msgs.msg import JointTrajectory
-from trajectory_msgs.msg import JointTrajectoryPoint
-
 
 class joy_to_twist:
 
@@ -35,8 +27,6 @@ class joy_to_twist:
         linear_scale = 0.05
         angular_scale = 0.1
         ts = TwistStamped()
-        gripper_cmd = JointTrajectory
-        jtp = JointTrajectoryPoint
 
         ts.header.stamp = rospy.Time.now()
         ts.header.frame_id = "arm_podest_link"
