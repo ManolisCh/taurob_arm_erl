@@ -4,5 +4,5 @@ service_ns: /pg70/driver
 default_vel: 0.02
 
 home: [[0.02]]
-closed: [[0.00]]
+closed: [[0.005]]
 open: [[0.03]]

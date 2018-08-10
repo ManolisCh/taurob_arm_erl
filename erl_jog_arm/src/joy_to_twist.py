@@ -48,7 +48,7 @@ class joy_to_twist:
         self.pub.publish(ts)
 
     def republish(self):
-        rospy.Subscriber("joy", Joy, self.callback)
+        rospy.Subscriber("/joy2", Joy, self.callback)
 
         rospy.spin()
 
